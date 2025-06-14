@@ -21,11 +21,12 @@ def calculate():
         entry.insert(0, "Error")
 
 root = tk.Tk()
-root.title("Stunning Calculator")
+root.title("Dark-themed Calculator")
 root.geometry("400x500")
-root.config(bg="#edf2f4")
+root.config(bg="#121212")
 
-entry = tk.Entry(root, font=('Helvetica', 24), borderwidth=5, relief='solid')
+entry = tk.Entry(root, font=('Helvetica', 24), borderwidth=5, relief='solid',
+                 bg="#1e1e1e", fg="#ffffff", insertbackground="#ffffff")
 entry.grid(row=0, column=0, columnspan=4, ipadx=8, ipady=8, pady=10)
 
 # Define button texts in a grid format
@@ -48,7 +49,7 @@ for item in buttons:
         cmd = lambda x=item: button_click(x)
 
     button = tk.Button(root, text=item, font=('Helvetica', 20), width=4, height=2, 
-                       command=cmd, bg="#ffcc5b")
+                       command=cmd, bg="#333333", fg="#ffffff", activebackground="#555555")
     button.grid(row=row_vals, column=col_vals, padx=5, pady=5)
 
     col_vals += 1
